@@ -1,0 +1,10 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply bg-ivory text-neutral-800 font-body}
+h1,h2,h3{@apply font-head text-maroon}
+.btn{@apply relative overflow-hidden rounded-full bg-maroon px-6 py-2.5 text-ivory font-medium transition hover:bg-[#5e1429] active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold}
+.btn::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(201,162,75,.55) 50%,transparent 70%);transform:translateX(-120%);animation:sh 3.5s infinite}
+@keyframes sh{to{transform:translateX(120%)}}
+.inp{@apply w-full rounded-xl border border-gold/40 bg-white px-4 py-2.5 outline-none focus:border-maroon focus:ring-2 focus:ring-blush}
+.border-pat{height:14px;background:repeating-linear-gradient(90deg,#C9A24B 0 10px,transparent 10px 14px,#7B1E3A 14px 24px,transparent 24px 28px)}
+@keyframes mq{to{transform:translateX(-50%)}}.mq{animation:mq 28s linear infinite}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
